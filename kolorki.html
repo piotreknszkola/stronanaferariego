@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="stylsiema.css">
+     <meta name="description" content="Super sklep"> 
+     <!-- dodalem desc tag -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hurtownia</title>
+</head>
+<body>
+<div id="content">
+<div id="menuUP">
+<div id="menuUPleft">
+<img  src="siema.png" id="logo">
+</div>
+<div id="menuUPright">
+  <a id="logo" href="https://www.youtube.com/watch?v=033Z3Flb58A"> SUPER ZAJEBISTY SKLEP </a> 
+</div>
+
+</div>
+<div id="mainContent">
+    <canvas id="myCanvas" width="800" height="600"></canvas>
+    <script>
+          const canvas = document.getElementById('myCanvas');
+          const ctx = canvas.getContext('2d');
+          function drawSquare() {
+            const squareSize = 50; 
+            const x = Math.random() * (canvas.width - squareSize); 
+            const y = Math.random() * (canvas.height - squareSize); 
+            const r = Math.floor(Math.random() * (255 - 0 + 1));
+            const g = Math.floor(Math.random() * (255 - 0 + 1));
+            const b = Math.floor(Math.random() * (255 - 0 + 1));
+            ctx.fillStyle = `rgba(${r}, ${g}, ${b}, 0.1)`;
+            ctx.fillRect(x, y, squareSize, squareSize); 
+          }
+          function startDrawing() {
+            setInterval(drawSquare, 1);
+            setInterval(drawSquare, 1);
+            setInterval(drawSquare, 1);
+            setInterval(drawSquare, 1);
+            setInterval(drawSquare, 1);
+          }
+          startDrawing();
+    </script>
+</div>
+<div id="footer">
+   <h1> strona testowa </h1>
+    <!-- dalem tu h1 zeby nie 
+    bylo bledu o brahu <h> 
+-->
+</div>
+</div>
+</body>
+</html>
